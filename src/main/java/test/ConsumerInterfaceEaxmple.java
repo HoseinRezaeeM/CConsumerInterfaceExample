@@ -3,7 +3,10 @@ package test;
 import java.util.List;
 @SuppressWarnings("unused")
 public class ConsumerInterfaceEaxmple {
-    public static void addlist(List<Integer> list){
-        System.out.println(list.stream().mapToInt(Integer::intValue).sum());
+    public static Integer addlist(List<Integer> list){
+        return list.stream().mapToInt(Integer::intValue).sum();
+    }
+    public static String addList(List<String> stringList){
+        return stringList.toString();
     }
 }
