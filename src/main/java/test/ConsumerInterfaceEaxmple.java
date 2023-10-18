@@ -9,4 +9,7 @@ public class ConsumerInterfaceEaxmple {
     public static String addList(List<String> stringList){
         return stringList.toString();
     }
+    public static Boolean chekAge(int age){
+        return age > 10;
+    }
 }
