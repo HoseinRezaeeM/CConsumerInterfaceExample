@@ -5,6 +5,7 @@ import java.util.List;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class Main {
     public static void main(String[] args) {
@@ -39,6 +40,13 @@ public class Main {
             System.out.println(p.length());
         };
         stringConsumer.accept("Hi how are you my name is hosin rezaei i am Java back-end developer");
+        Predicate<Integer> predicate = ConsumerInterfaceEaxmple::chekAge;
+        Boolean b =predicate.test(9);
+        System.out.println(b);
+
+        Predicate<String> predicate1 =(p)-> p.length()>100;
+        System.out.println(predicate1.test("dsffdfsfsdffd"));
+
 
     }
 }
