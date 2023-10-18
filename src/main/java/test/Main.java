@@ -11,6 +11,11 @@ public class Main {
         integerList.add(20);
         integerList.add(40);
 
+        Consumer<List<Integer>> listConsumer =(integer) -> {
+            ConsumerInterfaceEaxmple.addlist(integerList);
+        };
+        listConsumer.accept(integerList);
+
         Consumer<List<Integer>> consumer =ConsumerInterfaceEaxmple::addlist;
         System.out.print("Sum total : ");
         consumer.accept(integerList);
