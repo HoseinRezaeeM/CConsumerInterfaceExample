@@ -47,6 +47,10 @@ public class Main {
         Predicate<String> predicate1 =(p)-> p.length()>100;
         System.out.println(predicate1.test("dsffdfsfsdffd"));
 
+        Consumer<Student> studentConsumer =Student::new;
+  //      studentConsumer.accept(new Student(1,"hosein"));
+
+
 
     }
 }
