@@ -1,39 +1,31 @@
 package test;
 
-public class Student {
-    private int id;
-    private String name;
+import java.util.Comparator;
 
-    public Student(int id, String name) {
-        this.id = id;
-        this.name = name;
+public class Student implements Comparator<Student> {
+    private  int age;
+
+    public int getAge() {
+        return age;
     }
 
-    public Student(Student student) {
-        toString();
+    public Student() {
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public Student(int age) {
+        this.age = age;
     }
 
     @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+    public int compare(Student o1, Student o2) {
+        if( o1.getAge()>o2.getAge()){
+            return 1;
+        }
+        else if (o1.getAge()<o2.getAge()){
+            return -1;
+        }
+        {
+            return 0;
+        }
     }
 }
