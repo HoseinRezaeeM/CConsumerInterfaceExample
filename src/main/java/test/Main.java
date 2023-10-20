@@ -2,6 +2,7 @@ package test;
 
 import java.util.Comparator;
 import java.util.function.BiPredicate;
+import java.util.function.Predicate;
 
 public class Main {
     public static void main(String[] args) {
@@ -61,8 +62,8 @@ public class Main {
 //        Predicate<Integer> integerPredicate =(p)->p>18;
 //        System.out.println(integerPredicate.test(20));
 
-//        Predicate<Boolean> integerPredicate =Student::getAge;
-//        System.out.println(integerPredicate.test(20));
+       Predicate<Boolean> integerPredicate =Student::getAge;
+       System.out.println(integerPredicate.test(20));
         Student student = new Student();
         Comparator<Student> comparator = student::compare;
         System.out.println(comparator.compare(new Student(5545), new Student(5645)));
