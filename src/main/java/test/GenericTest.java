@@ -10,4 +10,7 @@ public class GenericTest {
     public <T> T creater(T t){
         return t;
     }
+    public <T> void provided(){
+
+    }
 }
